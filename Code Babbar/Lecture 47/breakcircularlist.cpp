@@ -67,7 +67,7 @@ void print(Node *head)
         cout << "List is Empty " << endl;
         return;
     }
-    
+
     do
     {
         cout << head->data << " ";
@@ -119,36 +119,80 @@ void deleteNode(Node *&head, int value)
     }
 }
 
+void split(Node *head)
+{
+    if (head == NULL)
+    {
+        cout << "List is Empty" << endl;
+        return;
+    }
+    if (head->next == head)
+    {
+        cout << "List can't can split" << endl;
+    }
+    int len = 1;
+    Node *temp = head->next;
+    while (temp != head)
+    {
+        temp = temp->next;
+        len++;
+    }
+    Node *a = temp;
+    a->next = NULL;
+
+    int mid = len / 2;
+    Node *head1 = head;
+    Node *head2 = head;
+    temp = head;
+    while (mid - 1)
+    {
+        temp = temp->next;
+        mid--;
+    }
+
+    //Nothing is Printing after exiting from above LOOP and i don't know why
+    
+    head2 = temp->next;
+    temp->next = head1;
+    print(head1);
+    temp = head2;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = head2;
+    print(head2);
+}
+
 int main()
 {
 
     Node *head = NULL;
 
     insertNode(head, 5, 3);
-    //print(head);
+    // print(head);
 
     insertNode(head, 3, 5);
-    //print(head);
+    // print(head);
 
     insertNode(head, 5, 7);
-    //print(head);
+    // print(head);
 
     insertNode(head, 7, 9);
-    //print(head);
+    // print(head);
 
     insertNode(head, 5, 6);
-    //print(head);
+    // print(head);
 
     insertNode(head, 9, 10);
-    //print(head);
+    // print(head);
 
-    //insertNode(head, 3, 4);
-    print(head);
+    insertNode(head, 3, 4);
+    // print(head);
 
     deleteNode(head, 5);
     print(head);
-    cout<<head->data<<endl;
-    
+    split(head);
 
     return 0;
 }
