@@ -13,6 +13,7 @@ public:
     }
 };
 */   
+// this is a problem on linked list
 
 class Solution {
 public:
