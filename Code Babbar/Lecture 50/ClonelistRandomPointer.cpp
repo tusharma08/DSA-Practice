@@ -12,7 +12,7 @@ public:
         random = NULL;
     }
 };
-*/
+*/   
 
 class Solution {
 public:
