@@ -8,26 +8,33 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-class Solution {
+
+class Solution
+{
 public:
-    ListNode* mergeInBetween(ListNode* list1, int a, int b, ListNode* list2) {
-        ListNode* temp = list1;
-        ListNode* anext = list1;
-        ListNode* bnext = list1;
+    ListNode *mergeInBetween(ListNode *list1, int a, int b, ListNode *list2)
+    {
+        ListNode *temp = list1;
+        ListNode *anext = list1;
+        ListNode *bnext = list1;
         int count = 1;
-        while (temp) {
-            if (count == a) {
+        while (temp)
+        {
+            if (count == a)
+            {
                 anext = temp;
             }
             temp = temp->next;
-            if (count == b) {
+            if (count == b)
+            {
                 bnext = temp;
             }
             count++;
         }
         anext->next = list2;
-        ListNode* temp2 = list2;
-        while (temp2->next) {
+        ListNode *temp2 = list2;
+        while (temp2->next)
+        {
             temp2 = temp2->next;
         }
         temp2->next = bnext->next;
