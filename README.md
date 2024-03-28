@@ -2,13 +2,6 @@
 
 Welcome to my DSA Practice repository! This is a collection of my solutions and practice problems from platforms like LeetCode, CodeStudio, and Code Babbar, aimed at enhancing my problem-solving skills and preparing for technical interviews.
 
-## 📚 Table of Contents
-
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
 ## 🚀 Getting Started
 
 To get a local copy up and running, follow these simple steps:
