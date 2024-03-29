@@ -30,10 +30,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Tushar Sharma - https://www.linkedin.com/in/tusharsharma9239/
 
-## 🙏 Acknowledgements
+## 🙏 My Platform Profiles
 
-- [LeetCode](https://leetcode.com/)
-- [CodeStudio](https://codestudio.com/)
-- [Code Babbar](https://codebabbar.com/)
+- [LeetCode](https://leetcode.com/tusharma08/)
+- [CodeStudio](https://www.naukri.com/code360/profile/tushar008)
+- [Geek4Geek](https://auth.geeksforgeeks.org/user/tusharsh08)
 
 Feel free to reach out if you have any questions or suggestions!
