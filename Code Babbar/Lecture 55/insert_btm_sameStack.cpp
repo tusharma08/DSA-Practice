@@ -8,7 +8,7 @@
 
 #include <bits/stdc++.h> 
 
-void solve(stack<int>& myStack, int s,int x) {
+void solve(stack<int>& myStack,int x) {
     if(myStack.empty()) {
         myStack.push(x);
         return ;
@@ -16,14 +16,13 @@ void solve(stack<int>& myStack, int s,int x) {
 
     int num = myStack.top();
     myStack.pop();
-    solve(myStack,s--,x);
+    solve(myStack,x);
     myStack.push(num);
 }
 
 stack<int> pushAtBottom(stack<int>& myStack, int x) 
 {
     // Write your code here.
-    int s = myStack.size();
-    solve(myStack,s,x);
+    solve(myStack,x);
     return myStack;
 }
