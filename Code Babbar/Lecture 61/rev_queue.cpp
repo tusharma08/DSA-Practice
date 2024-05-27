@@ -5,10 +5,10 @@ class Solution
         if(q.empty()) {
             return ;
         }
-        int val = q.front();
+        int num = q.front();
         q.pop();
         solve(q);
-        q.push(val);
+        q.push(num);
     }
     queue<int> rev(queue<int> q)
     {
