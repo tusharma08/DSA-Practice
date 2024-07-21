@@ -8,42 +8,50 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    ListNode* reverseKGroup(ListNode* head, int k) {
-        if (!head || k == 1) return head;
-        
-        ListNode* dummy = new ListNode(0);
+    ListNode *reverseKGroup(ListNode *head, int k)
+    {
+        if (!head || k == 1)
+            return head;
+
+        ListNode *dummy = new ListNode(0);
         dummy->next = head;
-        ListNode* prev = dummy;
-        
-        while (head) {
-            ListNode* tail = prev;
-            for (int i = 0; i < k; i++) {
+        ListNode *prev = dummy;
+
+        while (head)
+        {
+            ListNode *tail = prev;
+            for (int i = 0; i < k; i++)
+            {
                 tail = tail->next;
-                if (!tail) return dummy->next;
+                if (!tail)
+                    return dummy->next;
             }
-            
-            ListNode* next = tail->next;
+
+            ListNode *next = tail->next;
             tie(head, tail) = reverseList(head, tail);
-            
+
             prev->next = head;
             tail->next = next;
             prev = tail;
             head = tail->next;
         }
-        
-        ListNode* result = dummy->next;
+
+        ListNode *result = dummy->next;
         delete dummy;
         return result;
     }
 
 private:
-    pair<ListNode*, ListNode*> reverseList(ListNode* head, ListNode* tail) {
-        ListNode* prev = tail->next;
-        ListNode* curr = head;
-        while (prev != tail) {
-            ListNode* next = curr->next;
+    pair<ListNode *, ListNode *> reverseList(ListNode *head, ListNode *tail)
+    {
+        ListNode *prev = tail->next;
+        ListNode *curr = head;
+        while (prev != tail)
+        {
+            ListNode *next = curr->next;
             curr->next = prev;
             prev = curr;
             curr = next;
